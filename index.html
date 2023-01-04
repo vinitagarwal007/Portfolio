@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body::-webkit-scrollbar {
+    width: .5em;
+    background-color: rgba(97, 97, 97, 0.779);
+
+  }
+
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 5px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: black;
+    overflow-x: hidden;
+
+  }
+
+  .content {
+    height: 100%;
+    display: flex;
+    justify-content: left;
+  }
+
+  .content-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 2vw;
+    text-align: center;
+  }
+
+  .first {
+    background-color: #2D8BC6;
+    color: white;
+  }
+
+  .second {
+    background-color: #1875ae;
+    color: white;
+  }
+
+  .third {
+    background-color: #1b628d;
+    color: white;
+  }
+
+  .forth {
+    background-color: #1f5779;
+    color: white;
+  }
+
+  .scroll-element {
+    margin-top: 1rem;
+    margin-bottom: 0px;
+    padding: 15px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-family: Inter;
+    border-radius: 4px;
+    text-overflow: clip;
+  }
+
+  .content-name-scroll-div {
+    height: 4.5rem;
+    overflow: hidden;
+    margin-left: 20px;
+  }
+
+  .content-name-scroll {
+    animation: scroll 8s infinite;
+  }
+
+  .content-name-div {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar {
+    top: auto;
+    height: 8vh;
+    background-color: transparent;
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  .navbar-ele {
+    color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-decoration: none;
+    font-size: 1.5vw;
+    font-family: Inter;
+    font-weight: 200;
+  }
+
+  .navbar-list {
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-ele:hover {
+    animation-name: navbar-pop;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+  }
+
+  .sally {
+    margin-left: 7%;
+    margin-top: 3%;
+    width: 40vw;
+    height: 80vh;
+  }
+
+  .sallydiv {
+    width: 40vw;
+    height: 80vh;
+  }
+
+  @keyframes navbar-pop {
+    100% {
+      color: orange;
+    }
+  }
+
+  .home {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    margin: 0px;
+    padding-top: 8vh;
+    flex-direction: column;
+  }
+
+  .home-background {
+    position: absolute;
+    opacity: 20%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .home-foreground {
+    position: absolute;
+  }
+
+  #portfolio {
+    position: absolute;
+    margin-top: -12.5vh;
+    visibility: hidden;
+
+  }
+
+  .portfolio {
+    height: max-content;
+    width: 100vw;
+    display: flex;
+    margin: 0px;
+    flex-direction: column;
+    background-color: #212121;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #aboutme {
+    position: absolute;
+    margin-top: -15vh;
+    visibility: hidden;
+
+  }
+
+  .aboutme {
+    height: max-content;
+    width: 100vw;
+    display: flex;
+    margin: 0px;
+    flex-direction: column;
+    background-color: #212121;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #contact {
+    position: absolute;
+    margin-top: -15vh;
+    visibility: hidden;
+
+  }
+
+  .contact {
+    height: max-content;
+    width: 100vw;
+    display: flex;
+    margin: 0px;
+    flex-direction: column;
+    background-color: #212121;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  @keyframes scroll {
+    0% {
+      margin-top: -1rem;
+    }
+
+    16% {
+      margin-top: -5rem;
+    }
+
+    32% {
+      margin-top: -10rem;
+    }
+
+    50% {
+      margin-top: -15rem;
+    }
+
+    66% {
+      margin-top: -10rem;
+    }
+
+    82% {
+      margin-top: -5rem;
+    }
+
+    100% {
+      margin-top: -1rem;
+    }
+  }
+
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .text-white {
+    color: white;
+    font-family: Inter;
+  }
+
+  .vinit {
+    font-size: 3vw;
+    margin-bottom: 2rem;
+    text-align: center
+  }
+
+  .profile {
+    height: 30vh;
+    width: 15vw;
+    border-radius: 50%;
+    border-color: rgb(0, 171, 0);
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 2rem;
+    padding: 4px;
+  }
+
+  .profile-div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .text-orange {
+    color: orange;
+    font-family: Inter;
+  }
+
+  .bold {
+    font-weight: bolder;
+  }
+
+  .resumebtn {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    /* padding: 1rem; */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 1rem;
+    border-color: #449399;
+    border-style: solid;
+    background-color: transparent;
+  }
+
+  .resumebtn:hover {
+    animation: resumebtn 1s forwards;
+  }
+
+  .resumediv {
+    margin: 1.5rem;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: transparent;
+  }
+
+  @keyframes navbarani {
+    0% {
+      background-color: transparent;
+    }
+
+    100% {
+      background-color: rgba(97, 97, 97, 0.779);
+    }
+  }
+
+  @keyframes navbaranir {
+    0% {
+      background-color: rgba(97, 97, 97, 0.779);
+    }
+
+    100% {
+      background-color: transparent;
+    }
+  }
+
+  .portfolio-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: max-content;
+  }
+
+  .portfolio-text {
+    font-weight: bolder;
+    color: #4C70EF;
+    font-size: 1.5rem;
+    font-family: Inter;
+    width: max-content;
+    align-self: center;
+  }
+
+  .my-project-text {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    font-family: Inter;
+    width: max-content;
+    align-self: center;
+  }
+
+  .card {
+    background-color: #292C36;
+    width: max-content;
+    height: max-content;
+    border-radius: 10%;
+    margin: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+  }
+
+  .card-img {
+    width: 17vw;
+    height: 35vh;
+    align-self: center;
+  }
+
+  .card-button-holder {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .card-btn-demo {
+    border-color: rgb(1, 181, 175);
+    background-color: transparent;
+    border-style: solid;
+    padding: .8rem;
+    border-radius: .4rem;
+    margin: 1rem;
+    color: white;
+    font-weight: bolder;
+    font-size: 1rem;
+    font-family: Inter;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .card-btn-git {
+    white-space: nowrap;
+    overflow: hidden;
+    border-color: rgb(1, 181, 175);
+    background-color: transparent;
+    border-style: solid;
+    padding: .8rem;
+    border-radius: .4rem;
+    margin: 1rem;
+    color: white;
+    font-weight: bolder;
+    font-size: 1rem;
+    font-family: Inter;
+  }
+
+  .card-btn-hover:hover {
+    animation: card-btn 0.5s forwards;
+  }
+
+  @keyframes card-btn {
+    100% {
+      background-color: rgb(1, 181, 175);
+      border-style: solid;
+      border-color: rgb(1, 181, 175);
+    }
+
+    0% {
+      border-color: rgb(1, 181, 175);
+      background-color: transparent;
+      border-style: solid;
+    }
+  }
+
+  @keyframes view-all-btn {
+    100% {
+      background-color: #558FFF;
+      border-style: solid;
+      border-color: #558FFF;
+    }
+
+    0% {
+      border-color: #558FFF;
+      background-color: transparent;
+      border-style: solid;
+    }
+  }
+
+  .proj-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: Inter;
+  }
+
+  .card-holder {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    align-self: center;
+  }
+
+  .proj-desc {
+    font-size: 0.8rem;
+    margin-top: .5rem;
+  }
+
+  .view-all-btn {
+    width: max-content;
+    align-self: center;
+    border-color: #558FFF;
+    background-color: transparent;
+    border-style: solid;
+    padding: .8rem;
+    border-radius: .4rem;
+    margin: 1rem;
+    color: white;
+    font-weight: bolder;
+    font-size: 1rem;
+    font-family: Inter;
+  }
+
+  .view-all-hover:hover {
+    animation: view-all-btn 0.5s forwards;
+  }
+
+  .about-div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .about-img-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-img {
+    position: relative;
+    align-self: center;
+    width: 25vw;
+    height: 50vh;
+    border-style: none;
+  }
+
+  .about-img-ouline {
+    align-self: center;
+    width: 25vw;
+    height: 50vh;
+    position: absolute;
+    border: white 2px solid;
+    margin-right: 4rem;
+    margin-top: 4rem;
+  }
+
+  .about-img-border {
+    border-radius: 0 2rem 0 2rem;
+  }
+
+  .about-img-ouline1 {
+    align-self: center;
+    width: 25vw;
+    height: 50vh;
+    position: absolute;
+    background-color: rgb(172, 172, 172);
+  }
+
+  .about-content-div {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    overflow: hidden;
+  }
+
+  .about-head {
+    color: #4C70EF;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    overflow: hidden;
+  }
+
+  .about-name {
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 1rem;
+    overflow: hidden;
+  }
+
+  .about-content {
+    font-family: Inter;
+    color: rgb(200, 200, 200);
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    padding-right: 4rem;
+    overflow: hidden;
+    display: inline;
+    max-height: 20vh;
+  }
+
+  .what-i-do {
+    color: #4C70EF;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    margin-left: 1rem;
+    overflow: hidden;
+  }
+
+  .specialise {
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 1rem;
+    overflow: hidden;
+    color: white;
+  }
+
+  .content-card {
+    width: 30vw;
+    height: 15vh;
+    background-color: #292C36;
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+
+  .content-img1 {
+    align-self: center;
+    width: 5vw;
+    height: 10vh;
+    padding: .5rem;
+    background-color: #38405A;
+    border-radius: 1rem;
+  }
+
+  .content-title-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+  }
+
+  .content-title {
+    align-self: left;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-weight: bolder;
+    font-size: 1rem;
+    overflow: hidden;
+    display: inline;
+  }
+
+  .content-title-desc {
+    align-self: left;
+    color: #B0ADAD;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 0.8rem;
+    overflow: hidden;
+    display: inline;
+  }
+
+  .footer {
+    height: max-content;
+    width: 100%;
+    background-color: #292C36;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-content {
+    margin: 1rem;
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: lighter;
+  }
+
+  .contact-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: max-content;
+  }
+
+  .contact-head-text {
+    font-weight: bolder;
+    color: #4C70EF;
+    font-size: 1.5rem;
+    font-family: Inter;
+    width: max-content;
+    align-self: center;
+  }
+
+  .contact-head-hire {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-family: Inter;
+    width: max-content;
+    align-self: center;
+  }
+
+  .contact-img-div {
+    width: 100%;
+    height: max-content;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-img {
+    width: 35vw;
+    height: 60vh;
+    align-self: center;
+  }
+
+  .contact-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .contact-content-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .text-box {
+    align-self: left;
+    width: 30vw;
+    border: #2D8BC6;
+    border-style: solid;
+    border-width: 1.5px;
+    margin: 0.5rem;
+    padding: 1rem;
+    color: white;
+    background-color: #323232;
+  }
+
+  .tb-first {
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .tb-last {
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  .text-area {
+    height: 10vh;
+    resize: none;
+  }
+
+  .contact-also {
+    display: flex;
+    justify-content: left;
+  }
+
+  .send-mail-btn {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    /* padding: 1rem; */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 1rem;
+    border-color: #449399;
+    border-style: solid;
+    background-color: transparent;
+    width: max-content;
+    align-self: center;
+    margin: 1rem;
+  }
+
+  .send-mail-btn:hover {
+    animation: resumebtn 1s forwards;
+  }
+
+  .contact-content-form-tb {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  @keyframes resumebtn {
+    0% {
+      background-color: transparent;
+    }
+
+    100% {
+      background-color: #4493998c;
+    }
+
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .social-media-icon {
+    margin: 1rem;
+    text-decoration: none;
+  }
+
+  .fa {
+    font-size: 2rem;
+    color: white;
+  }
+
+  .fa-facebook {
+    background-color: blue;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    width: 2rem;
+  }
+
+  .fa-twitter {
+    background-color: rgb(29, 165, 255);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    width: 2rem;
+  }
+
+  .fa-github {
+    background-color: rgb(150, 150, 150);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    width: 2rem;
+  }
+
+  .fa-instagram {
+    background-color: rgb(253, 95, 95);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    width: 2rem;
+  }
+
+  .fa-linkedin {
+    background-color: rgb(50, 50, 170);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    width: 2rem;
+  }
+
+  .and-im {
+    font-family: Inter;
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 850px) {
+    .card-img {
+      width: 40vw;
+      height: 20vh;
+      align-self: center;
+    }
+
+    .card {
+      background-color: #292C36;
+      width: max-content;
+      height: max-content;
+      border-radius: 10%;
+      padding: 0.5rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      align-content: center;
+    }
+
+    .sallydiv {
+      display: none;
+    }
+
+    .navbar {
+      display: none;
+    }
+
+    .content {
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+    }
+
+
+    .content-name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      font-size: 2vw;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .content-img1 {
+      align-self: center;
+      width: 20vw;
+      height: 10vh;
+      padding: .5rem;
+      background-color: #38405A;
+      border-radius: 1rem;
+    }
+
+    .profile {
+      margin-top: 2rem;
+      height: 20vh;
+      width: 40vw;
+      border-radius: 50%;
+      border-color: rgb(0, 171, 0);
+      border-style: solid;
+      border-width: 2px;
+      margin-bottom: 2rem;
+      padding: 4px;
+    }
+
+    .about-img-div {
+      display: none;
+    }
+
+    .and-im {
+      margin: 1rem;
+    }
+
+    .vinit {
+      font-size: 6vw;
+      margin-bottom: 2rem;
+      text-align: center
+    }
+
+    .content-card-holder {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .content-card {
+      align-self: center;
+      width: 80vw;
+      height: 15vh;
+      background-color: #292C36;
+      margin: 1rem;
+      border-radius: 1rem;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+    }
+
+    .card-holder {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      overflow: hidden;
+      align-self: center;
+    }
+
+    .contact-img-div {
+      display: none;
+    }
+
+    .text-box {
+      align-self: center;
+      width: 70vw;
+      border: #2D8BC6;
+      border-style: solid;
+      border-width: 1.5px;
+      margin: 0.5rem;
+      padding: 1rem;
+      color: white;
+      background-color: #323232;
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
+
+    .social-media-icon {
+      margin: 0.5rem;
+      text-decoration: none;
+    }
+
+    .contact-content-form-tb {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .about-content-div {
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .about-content {
+      font-family: Inter;
+      color: rgb(200, 200, 200);
+      font-size: 1rem;
+      margin-left: 1.5rem;
+      margin-top: 1.5rem;
+      overflow: hidden;
+      display: inline;
+      max-height: 25vh;
+      width: 90vw;
+    }
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vinit Agarwal</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+
+<body>
+  <img id="backgroud" class="home-background"
+    src="http://drive.google.com/uc?export=view&id=11mfuAa_s_B5QW7gmFNh5rMXkbj-SEzZz" />
+  <div class="home-foreground">
+    <div id="home" class="home">
+      <div id="content" class="content">
+        <div class="sallydiv">
+          <img class="sally" src="http://drive.google.com/uc?export=view&id=1xa68pSsYJRUHEo47aIJ02p3AqqPjp3qD" />
+        </div>
+        <div class="content-name-div">
+          <div class="profile-div">
+            <img class="profile" src="http://drive.google.com/uc?export=view&id=1n64V3B44TG_PQweCz18y4Dkv_gzv4_gh" />
+          </div>
+          <p class="text-white vinit">My Name Is <text class="text-orange bold">Vinit Agarwal</text></p>
+          <div class="content-name">
+            <p class="text-white and-im">And I'm </p>
+            <div class="content-name-scroll-div">
+              <section class="content-name-scroll">
+                <p class="scroll-element first">Software Developer</p>
+                <p class="scroll-element second">Android Developer</p>
+                <p class="scroll-element third">Backend Developer</p>
+                <p class="scroll-element forth">Full Stack Developer</p>
+              </section>
+            </div>
+          </div>
+          <div class="resumediv">
+            <a class="resumea" href="https://drive.google.com/file/d/1deS7zrJYvjPjBkYwFDH3vlssBBQRoBus/view"
+              target="_blank"><button class="resumebtn">Resume</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="aboutme">
+      <p id="aboutme"></p>
+      <div class="about-div">
+        <div class="about-img-div">
+          <span class="about-img-ouline about-img-border"></span>
+          <span class="about-img-ouline1 about-img-border"></span>
+          <img class="about-img about-img-border"
+            src="http://drive.google.com/uc?export=view&id=1WOnXvNnEGdTV5wJ8dWcWi7JvW6qZT1qN" />
+        </div>
+        <div class="about-content-div">
+          <p class="about-head">About Me</p>
+          <p class="about-name text-orange">I'm Vinit Agarwal</p>
+          <p class="about-content text-white">
+            And I am full-stack web/android developer focused on building full-scale applications using modern day
+            server architectures and tested database structure. Experienced in Team building and working
+            with team to build scalable applications for Web, Android, Windows system.
+          </p>
+          <p class="what-i-do">What I Do</p>
+          <p class="text-white specialise">Specializing In</p>
+          <div class="content-card-holder">
+            <div class="content-card">
+              <div class="content-card-img">
+                <img class="content-img1"
+                  src="http://drive.google.com/uc?export=view&id=1OB4KWPgN48Mq5-ud4J7xBBeNF3GoTYJv" />
+              </div>
+              <div class="content-title-div">
+                <p class="content-title text-white">Full-Stack Developer</p>
+                <p class="content-title-desc text-white">Web App,MySQL,NodeJS</p>
+              </div>
+            </div>
+            <div class="content-card">
+              <div class="content-card-img">
+                <img class="content-img1"
+                  src="http://drive.google.com/uc?export=view&id=1CEIrtYi-2OXmsk9n1shjryK6eRLx_APY" />
+              </div>
+              <div class="content-title-div">
+                <p class="content-title text-white">Application Devloper</p>
+                <p class="content-title-desc text-white">Android,Windows OS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio">
+      <p id="portfolio"></p>
+      <div class="portfolio-head">
+        <p class="text-white portfolio-text">Portfolio</p>
+        <p class="text-white my-project-text">My Projects</p>
+      </div>
+      <div class="card-holder">
+        <div class="card">
+          <img class="card-img" src="http://drive.google.com/uc?export=view&id=1xa68pSsYJRUHEo47aIJ02p3AqqPjp3qD" />
+          <p class="proj-name text-white">Social Chating App</p>
+          <p class="proj-desc text-white">Simple app using websockets</p>
+          <div class="card-button-holder">
+            <button class="card-btn-demo card-btn-hover">View Demo</button>
+            <button class="card-btn-git card-btn-hover">View Code</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img" src="http://drive.google.com/uc?export=view&id=1xa68pSsYJRUHEo47aIJ02p3AqqPjp3qD" />
+          <p class="proj-name text-white">Social Chating App</p>
+          <p class="proj-desc text-white">Simple app using websockets</p>
+          <div class="card-button-holder">
+            <button class="card-btn-demo card-btn-hover">View Demo</button>
+            <button class="card-btn-git card-btn-hover">View Code</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img" src="http://drive.google.com/uc?export=view&id=1xa68pSsYJRUHEo47aIJ02p3AqqPjp3qD" />
+          <p class="proj-name text-white">Social Chating App</p>
+          <p class="proj-desc text-white">Simple app using websockets</p>
+          <div class="card-button-holder">
+            <button class="card-btn-demo card-btn-hover">View Demo</button>
+            <button class="card-btn-git card-btn-hover">View Code</button>
+          </div>
+        </div>
+      </div>
+      <button class="view-all-btn view-all-hover">Visit Github</button>
+    </div>
+    <div class="contact">
+      <p id="contact"></p>
+      <div class="contact-head">
+        <p class="contact-head-text">Contact</p>
+        <p class="contact-head-hire text-white">Wanna Hire !</p>
+        <div class="contact-content">
+          <div class="contact-img-div">
+            <img class="contact-img"
+              src="http://drive.google.com/uc?export=view&id=1R33e0uhxibrzBteHW8ioWUfo26Qip1Qs" />
+          </div>
+          <div class="contact-content-form">
+            <div class="contact-content-form-tb">
+              <input type="text" id="contact-email" placeholder="Enter Your Email" class="text-box tb-first" />
+              <input type="text" id="contact-name" placeholder="Enter Your Name" class="text-box" />
+              <input type="text" id="contact-subject" placeholder="Purpose for Enquiry" class="text-box" />
+              <textarea id="contact-message" placeholder="Enter Your Message"
+                class="text-area text-box tb-last"></textarea>
+              <button id="send-mail-btn" class="send-mail-btn" onclick="sendmail()">Send Message</button>
+              <div class="contact-also">
+                <div class="social-media">
+                  <a href="https://www.facebook.com/vinitagarwal.sjchs" target="_blank" class="social-media-icon fa
+                    fa-facebook"></a>
+                  <a href="https://twitter.com/vinitagarwal003" target="_blank"
+                    class="social-media-icon fa fa-twitter"></a>
+                  <a href="https://github.com/vinitagarwal007" target="_blank"
+                    class="social-media-icon fa fa-github"></a>
+                  <a href="https://www.instagram.com/vinit_agarwal003" target="_blank" class="social-media-icon fa
+                    fa-instagram"></a>
+                  <a href="https://www.linkedin.com/in/vinit-agarwal007" target="_blank" class="social-media-icon fa
+                    fa-linkedin"></a>
+                </div>
+              </div>
+              <!-- <p class="text-white">Or</p>
+              <p class="text-white" style="margin-top: 0.5rem;font-family: Inter;font-size: 1.3rem;">
+                vinitagarwal.garg@gmail.com</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p class="footer-content text-white">Made With ❤ By Vinit Agarwal</p>
+    </div>
+  </div>
+  <div id="navbar" class="navbar">
+    <ul class="navbar-list">
+      <a class="navbar-ele" href="#home">Home</a>
+      <a class="navbar-ele" href="#aboutme">About</a>
+      <a class="navbar-ele" href="#portfolio">Portfolio</a>
+      <a class="navbar-ele" href="#contact">Contact</a>
+    </ul>
+  </div>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.6.3.slim.js"
+  integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
+<script>
+  function sendmail() {
+    document.getElementById("send-mail-btn").innerText = "Please Wait..."
+    var email = document.getElementById("contact-email").value
+    console.log("sendmailclicked" + document.getElementById("contact-email").value)
+    if (document.getElementById("contact-email").value.includes("@") && document.getElementById("contact-email").value.split("@")[1].includes(".")) {
+      var resdata;
+      fetch('https://sheetdb.io/api/v1/fzz5yolqz2fqa', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          data: [
+            {
+              'email': document.getElementById("contact-email").value,
+              'name': document.getElementById("contact-name").value,
+              'subject': document.getElementById("contact-subject").value,
+              'message': document.getElementById("contact-message").value
+            }
+          ]
+        })
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data)
+          document.getElementById("send-mail-btn").innerText = "Send Message"
+          document.getElementById("contact-email").value = ""
+          document.getElementById("contact-name").value = ""
+          document.getElementById("contact-subject").value = ""
+          document.getElementById("contact-message").value = ""
+          if (data.created == 1) {
+            alert("Message Sent");
+          } else {
+            alert("Message Sending Failed")
+          }
+        });
+    } else {
+      alert("Please Enter A Valid Email")
+    }
+  }
+  $(document).ready(function () {
+    $(window).scroll(function () {
+      var scroll = $(window).scrollTop();
+      if (scroll > 50) {
+        $(".navbar").css("animation", "navbarani 1s forwards");
+      }
+      else {
+        $(".navbar").css("animation", "navbaranir 1s forwards");
+      }
+    })
+  })
+</script>
+
+</html>
